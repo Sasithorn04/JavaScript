@@ -1,34 +1,20 @@
-function random(){
-    let num = Math.floor(Math.random() * 10)
-    console.log(num)
-    if (num == 0){
-        document.getElementById("yt").innerHTML = '<iframe width="250" height="140" src="https://www.youtube.com/embed/lFsXixn7PGY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-    }
-    else if (num == 1){
-        document.getElementById("yt").innerHTML = '<iframe width="250" height="140" src="https://www.youtube.com/embed/CpMnEJwk0TU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-    }
-    else if (num == 4){
-        document.getElementById("yt").innerHTML = '<iframe width="250" height="140" src="https://www.youtube.com/embed/HGkASBMiTkM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-    }
-    else if (num == 2){
-        document.getElementById("yt").innerHTML = '<iframe  width="250" height="140" src="https://www.youtube.com/embed/fS1wLTOGu5A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-    }
-    else if (num == 3){
-        document.getElementById("yt").innerHTML = '<iframe width="250" height="140" src="https://www.youtube.com/embed/dJ9uVVNWClk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-    }
-    else if (num == 5){
-        document.getElementById("yt").innerHTML = '<iframe width="250" height="140" src="https://www.youtube.com/embed/PBZFGmJKgAo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-    }
-    else if (num == 6){
-        document.getElementById("yt").innerHTML = '<iframe width="250" height="140" src="https://www.youtube.com/embed/AbEjhYLarSc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-    }
-    else if (num == 7){
-        document.getElementById("yt").innerHTML = '<iframe width="250" height="140" src="https://www.youtube.com/embed/gDTDFz0PL78" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-    }
-    else if (num == 8){
-        document.getElementById("yt").innerHTML = '<iframe width="250" height="140" src="https://www.youtube.com/embed/2KS3C7LHw_c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-    }
-    else {
-        document.getElementById("yt").innerHTML = '<iframe width="250" height="140" src="https://www.youtube.com/embed/V9fZ7gA_aDw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-    }
-}
+let music = [
+    '<iframe width="250" height="140" src="https://www.youtube.com/embed/tyrVtwE8Gv0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    '<iframe width="250" height="140" src="https://www.youtube.com/embed/G-8eoy61jSU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    '<iframe width="250" height="140" src="https://www.youtube.com/embed/CmOARvQO_us" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    '<iframe  width="250" height="140" src="https://www.youtube.com/embed/0QU3TXS8FjA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    '<iframe width="250" height="140" src="https://www.youtube.com/embed/CKDwsFbq1_c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    '<iframe width="250" height="140" src="https://www.youtube.com/embed/ahkGRFhyxx4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    '<iframe width="250" height="140" src="https://www.youtube.com/embed/AbEjhYLarSc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    '<iframe width="250" height="140" src="https://www.youtube.com/embed/Cgt74TruI2c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    '<iframe width="250" height="140" src="https://www.youtube.com/embed/GgVjHOx9kho" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    '<iframe width="250" height="140" src="https://www.youtube.com/embed/hdqlevtXF8M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+];
+let randomButton = document.getElementById('button');
+let output = document.getElementById('yt');
+randomButton.addEventListener('click', () =>{
+    let n = music.length;
+    let index = Math.floor(Math.random() * n);
+    let musicyt = music[index];
+    yt.innerHTML = musicyt;
+});
